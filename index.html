@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Signup Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign up form</h1>
+      <div class="form">
+        <div class="form_left">
+          <form id="signup_form">
+            <div class="input_container">
+              <p class="label" for="username">Username:</label>
+                
+              <input
+                class="input"
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter Name"
+              />
+            </div>
+            <div id="username_length_error" class="hide error_message"></div>
+            <div class="input_container">
+              <p class="label" for="email">Email:</label>
+              <input
+                class="input"
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Enter your Email"
+              />
+            </div>
+            <div id="invalid_email_error" class="hide error_message" ></div>
+            
+            <div class="input_container">
+              <p class="label" for="email">Select a Country:</label>
+                <input
+                type="text"
+                class="input"
+
+                id="countryInput"
+                placeholder="Search for a country..."
+                />
+              <select id="countrySelect"></select>
+              <div id="results"></div>
+            </div>
+            <div class="input_container">
+              <p class="label" for="password">Password:</label>
+              <input
+                class="input"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter Password"
+              />              
+            </div>
+            <div id="password_length_error" class="hide error_message"></div>
+            <div class="input_container">
+              <p class="label" for="confirm-password"
+                >Confirm Password:</label
+              >
+              <input
+                class="input"
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="Confirm Your password"
+              />
+            </div>
+            <div id="password_not_match_error" class="hide error_message"></div>
+          <button class="form_button" type="submit">Register</button>
+        </form>
+        
+        <button class="toggleButton" onclick="themeToggle()">Switch mode</button>  
+        </div>
+        <div class="form_right">
+          <div class="hide" id="error_container">
+            <ul id="errors">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="debounce.js"></script>
+  </body>
+</html>
